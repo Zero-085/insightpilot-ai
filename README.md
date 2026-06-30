@@ -1,46 +1,253 @@
-# InsightPilot AI
+# 🚀 InsightPilot AI
 
-InsightPilot AI is a modular AI-powered Business Intelligence web application that converts uploaded CSV datasets into actionable business insights using a multi-agent architecture.
+**An AI-Powered Business Intelligence Dashboard built with FastAPI, Google Gemini, Google ADK, MCP, and Plotly.**
 
-## Architecture
+InsightPilot AI transforms raw CSV datasets into actionable business intelligence through an intelligent multi-agent pipeline. Users can upload datasets, automatically clean and analyze data, generate interactive visualizations, and receive AI-powered business insights.
 
-This project is organized as a modular application split into a FastAPI backend and a responsive frontend:
+---
 
-- **Backend**: Python-based FastAPI web server containing:
-  - **Agents**: Distinct multi-agent framework subdirectories (`coordinator`, `cleaner`, `analyzer`, `visualizer`, `insight`).
-  - **Models**: Database and application models.
-  - **API**: Router pathways for endpoints.
-  - **MCP**: Model Context Protocol configurations.
-  - **Security**: Security and authentication layers.
-  - **Skills**: Actions and tasks executed by agents.
-  - **Utils**: Helper modules.
-- **Frontend**: Clean and responsive HTML/CSS/JS dashboard layout presenting data analytics, CSV previews, metrics, visualizations, and generated text.
+# 📌 Features
 
-## Running the Application
+- 📂 Upload CSV datasets
+- 🧹 Automatic data cleaning
+- 📊 Statistical analysis
+- 📈 Interactive Plotly visualizations
+- 🤖 AI-generated business insights using Google Gemini
+- 🧠 Multi-Agent architecture
+- ⚙️ Google Agent Development Kit (ADK) integration
+- 🔌 Model Context Protocol (MCP) server
+- 📑 Dataset preview
+- 📉 Correlation analysis
+- 📋 Automatic data quality reports
 
-### 1. Prerequisites
-- Python 3.10+
-- pip
+---
 
-### 2. Setup
-Clone the repository, initialize your virtual environment, and install dependencies:
+# 🏗 Architecture
+
+```
+                    CSV Upload
+                         │
+                         ▼
+                Coordinator Agent
+                         │
+ ┌─────────────┬──────────────┬──────────────┬──────────────┐
+ ▼             ▼              ▼              ▼
+Cleaner     Analyzer     Visualizer     Insight Agent
+ Agent        Agent         Agent        (Gemini API)
+ │             │              │              │
+ └─────────────┴──────────────┴──────────────┘
+                         │
+                         ▼
+            Business Intelligence Dashboard
+```
+
+---
+
+# 🧠 Multi-Agent Workflow
+
+### Cleaner Agent
+- Detects missing values
+- Removes duplicate rows
+- Infers column data types
+
+### Analyzer Agent
+- Calculates descriptive statistics
+- Correlation matrix
+- Categorical summaries
+- Dataset preview
+
+### Visualizer Agent
+Automatically generates:
+
+- Histogram
+- Bar Chart
+- Pie Chart
+- Line Chart
+
+using Plotly.
+
+### Insight Agent
+
+Uses **Google Gemini 2.5 Flash** to generate:
+
+- Executive Summary
+- Key Business Findings
+- Actionable Recommendations
+
+---
+
+# 🔌 MCP Integration
+
+InsightPilot AI includes a standalone MCP server exposing dataset tools.
+
+Available MCP Tools:
+
+- list_datasets
+- get_dataset_metadata
+- get_dataset_schema
+- get_dataset_preview
+
+---
+
+# 🤖 Google ADK Integration
+
+The project demonstrates orchestration using Google Agent Development Kit.
+
+Workflow:
+
+```
+START
+   │
+Cleaner
+   │
+Analyzer
+   │
+Visualizer
+   │
+Insight Agent
+   │
+ END
+```
+
+---
+
+# 🛠 Tech Stack
+
+## Backend
+
+- FastAPI
+- Python
+- Pandas
+- Plotly
+- Google Gemini API
+- Google ADK
+- MCP
+
+## Frontend
+
+- HTML
+- CSS
+- JavaScript
+
+---
+
+# 📁 Project Structure
+
+```
+InsightPilot-AI
+│
+├── backend
+│   ├── agents
+│   ├── api
+│   ├── adk
+│   ├── mcp
+│   ├── services
+│   └── utils
+│
+├── frontend
+│
+├── run_adk_demo.py
+├── run_mcp_demo.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# ⚙ Installation
+
+Clone the repository
 
 ```bash
-# Create virtual environment
+git clone https://github.com/Zero-085/insightpilot-ai.git
+```
+
+Create virtual environment
+
+```bash
 python -m venv .venv
+```
 
-# Activate virtual environment (Windows)
+Activate
+
+Windows
+
+```bash
 .venv\Scripts\activate
+```
 
-# Install dependencies
+Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 3. Running the Server
-Start the backend server using Uvicorn:
+Create a `.env` file
+
+```
+GEMINI_API_KEY=YOUR_API_KEY
+GEMINI_MODEL=gemini-2.5-flash
+```
+
+Run the application
 
 ```bash
 uvicorn backend.main:app --reload
 ```
 
-The application will start, by default, on `http://127.0.0.1:8000`. You can inspect the health endpoint at `http://127.0.0.1:8000/health`.
+Open
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+# ▶ Running ADK Demo
+
+```bash
+python run_adk_demo.py
+```
+
+---
+
+# ▶ Running MCP Demo
+
+```bash
+python run_mcp_demo.py
+```
+
+---
+
+# 📊 Sample Dashboard
+
+(Add screenshots here)
+
+- Dashboard
+- Charts
+- AI Insights
+- Upload page
+
+---
+
+# 🎯 Future Improvements
+
+- PDF report generation
+- Authentication
+- Database integration
+- Multi-file analysis
+- Real-time dashboards
+- Cloud deployment
+- RAG-enabled document analysis
+
+---
+
+# 👨‍💻 Author
+
+**Himanshu Mishra**
+
+B.Tech (AI & ML)
+
+Aspiring Data Analyst
+
+GitHub: https://github.com/Zero-085

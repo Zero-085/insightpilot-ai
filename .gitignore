@@ -46,4 +46,11 @@ active/
 # OS files
 .DS_Store
 Thumbs.db
-backend/temp_uploads/
+
+#Others 
+
+scratch/
+backend/temp_uploads/*
+!backend/temp_uploads/.gitkeep
+
+
