@@ -46,3 +46,4 @@ active/
 # OS files
 .DS_Store
 Thumbs.db
+backend/temp_uploads/
