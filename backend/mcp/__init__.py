@@ -1,1 +1,1 @@
-# InsightPilot AI Model Context Protocol (MCP) Module
+# Model Context Protocol (MCP) server package for InsightPilot AI
