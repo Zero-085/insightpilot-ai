@@ -1,0 +1,5 @@
+TransactionID,Date,Customer,Amount,Region
+TX100,2026-06-01,Acme Corp,150.0,North
+TX200,2026-06-02,Beta LLC,250.5,West
+TX300,2026-06-03,Acme Corp,,East
+TX400,2026-06-04,Gamma Inc,500.0,North

@@ -1,0 +1,1 @@
+# InsightPilot AI Skills Module
