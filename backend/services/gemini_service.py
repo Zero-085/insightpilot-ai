@@ -45,10 +45,8 @@ class GeminiService:
         self.client = None
         if self.api_key:
             try:
-                # Initialize Gemini Client with custom timeout via HttpOptions (converted to milliseconds)
                 self.client = genai.Client(
-                    api_key=self.api_key,
-                    http_options=types.HttpOptions(timeout=int(self.timeout * 1000))
+                    api_key=self.api_key
                 )
                 logger.info(f"Gemini client initialized successfully. Model: {self.model_name}, Timeout: {self.timeout}s")
             except Exception as e:
